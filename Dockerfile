@@ -7,9 +7,10 @@ RUN useradd -m $USER && \
     mkdir /app && \
     chown $USER:$USER /app 
 
-COPY requirements.apt requirements.apt
+ARG FFMPEG_VER
 RUN apt update && \
-    xargs apt install -y --no-install-recommends < requirements.apt \
+    apt install -y --no-install-recommends \
+                ffmpeg={FFMPEG_VER:-7:4.3.4-0+deb11u1} \
     && rm -rf /var/lib/apt/lists/*
 
 USER $USER
