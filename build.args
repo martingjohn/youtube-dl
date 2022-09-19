@@ -1,3 +1,2 @@
 #FROM_VER=3.10.6
 FROM_VER=3.10.7-bullseye
-FFMPEG_VER=7:4.3.4-0+deb11u1
