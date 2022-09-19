@@ -16,9 +16,6 @@ USER $USER
 COPY requirements.pip requirements.pip
 RUN python -m venv app && \
     python3 -m pip install -r requirements.pip
-#RUN python -m venv app && \
-#    python3 -m pip install --upgrade pip && \
-#    python3 -m pip install -U yt-dlp
 
 WORKDIR /data
 
